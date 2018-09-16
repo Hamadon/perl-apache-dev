@@ -10,6 +10,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv 14AA40EC0831756756D7F66C
 # Setup Apache using mod_perl
 RUN apt-get update && \
     apt-get -y install \
+	    build-essential \
 		supervisor \
 		apache2 \
 		libapache2-mod-perl2 \
