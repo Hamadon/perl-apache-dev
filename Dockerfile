@@ -15,6 +15,7 @@ RUN apt-get update && \
 		libapache2-mod-perl2 \
 		perl \
 		cpanminus \
+		libplack-perl \
 		libmojolicious-perl \
 		libyaml-perl \
 		libdbix-class-perl \
