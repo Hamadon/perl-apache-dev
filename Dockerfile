@@ -35,7 +35,7 @@ COPY docker/supervisord-apache2.conf /etc/supervisor/conf.d/apache2.conf
 
 RUN chmod 755 /opt/docker/*.sh
 
-RUN cpanm Mojo::JWT
+RUN cpanm Mojo::JWT Crypt::Passwd::XS String::Random Data::Dumper
 
 # Environment variables to configure php
 ENV PHP_UPLOAD_MAX_FILESIZE 40M
