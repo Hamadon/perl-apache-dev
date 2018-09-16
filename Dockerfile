@@ -14,6 +14,13 @@ RUN apt-get update && \
 		apache2 \
 		libapache2-mod-perl2 \
 		perl \
+		cpanminus \
+		libmojolicious-perl \
+		libyaml-perl \
+		libdbix-class-perl \
+		libdbix-connector-perl \
+		libextutils-config-perl \
+		make \
 		curl \
     && apt-get autoremove -y \
     && apt-get clean all && \
@@ -25,6 +32,8 @@ COPY docker/*.sh /opt/docker/
 COPY docker/supervisord-apache2.conf /etc/supervisor/conf.d/apache2.conf
 
 RUN chmod 755 /opt/docker/*.sh
+
+RUN cpanm Mojo::JWT
 
 # Environment variables to configure php
 ENV PHP_UPLOAD_MAX_FILESIZE 40M
