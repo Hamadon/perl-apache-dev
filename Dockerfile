@@ -21,6 +21,7 @@ RUN apt-get update && \
 		libyaml-perl \
 		libdbix-class-perl \
 		libdbix-connector-perl \
+		libdbd-pg-perl \
 		libextutils-config-perl \
 		make \
 		curl \
